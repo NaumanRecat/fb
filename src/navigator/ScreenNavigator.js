@@ -11,7 +11,7 @@ export const ScreenNavigator =()=>  {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name="SignIn" component={SignIn} />
+      <Stack.Screen name="SignIn" component={SignIn}  />
       </Stack.Navigator>
     </NavigationContainer>
   );
