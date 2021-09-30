@@ -22,7 +22,7 @@ export class SignIn extends React.Component{
         } else {
           const getData = {
             userName: this.state.name.toUpperCase(),
-            fatherName: this.state.fname.toUpperCase(),
+            password: this.state.fname.toUpperCase(),
             useremail: this.state.email.toLowerCase(),
             userPhone: this.state.phone,
           };

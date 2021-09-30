@@ -2,6 +2,7 @@ import React from "react";
 import {View, Text, StyleSheet, Image, TextInput, Button, TouchableOpacity, alert} from 'react-native';
 import {widthPercentageToDP as w, heightPercentageToDP as h} from 'react-native-responsive-screen';
 
+import {Dashboard} from '../screen/Dashboard';
 
 export class Signup extends React.Component{
 
@@ -16,16 +17,16 @@ export class Signup extends React.Component{
                 </View>
 
             <View style={styles.InputContainer}>
-                <TextInput style={styles.TextInput} placeholder={'Phone number or email Address'} />
-                <TextInput style={styles.TextInput2} placeholder={'Password'}/>
+                <TextInput  style={styles.TextInput} placeholder={'Phone number or email Address'} />
+                <TextInput  style={styles.TextInput2} placeholder={'Password'}/>
             </View>
 
-            <View style={styles.Login} >
+            <TouchableOpacity onPress={() => this.props.navigation.navigate("Dashboard")}  style={styles.Login} >
             <TouchableOpacity style={styles.ButtonLogin} >
-             <Text style={styles.LoginText}> Log In</Text>
+            <Text style={styles.LoginText}> Log In</Text>
             </TouchableOpacity>
             <Text  style={styles.Forgotpassword} >Forgotten Password?</Text>
-            </View>
+            </TouchableOpacity >
 
             </View>
         )
