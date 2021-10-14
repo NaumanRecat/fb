@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {View, Text, Button} from 'react-native';
 
 
@@ -20,6 +20,13 @@ function Api(){
     const result = await res.json()
     setjoke(result.value.joke)
     }
+
+    useEffect(()=>{
+        getjokes()
+    },[])
+
+
+
     return(
       <View style={{
           flex:1,
